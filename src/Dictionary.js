@@ -8,6 +8,7 @@ export default function Dictionary() {
   }
   function lookUp(event) {
     event.preventDefault();
+    console.log(keyword);
   }
   return (
     <div className="container-fluid">
