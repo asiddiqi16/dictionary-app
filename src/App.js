@@ -11,7 +11,7 @@ function App() {
           This project has been created by Ariba Siddiqi, open sourced on{" "}
           <a href="https://github.com/asiddiqi16/dictionary-app"> GitHub </a>{" "}
           and hosted on
-          <a href="">Netlify</a>.
+          <a href="/">Netlify</a>.
         </p>
       </footer>
     </div>
