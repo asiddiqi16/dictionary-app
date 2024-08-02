@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
+import WordMeaning from "./WordMeaning";
 
 export default function Dictionary() {
-  //dictionary word lookup state
+  // Dictionary word lookup state
   let [keyword, setKeyword] = useState(null);
-  // dictionary api key
+  let [results, setResults] = useState(null);
+  // Dictionary api key
   const apiKey = "483ecb596o30da81tf76d2a4bf19d4a6";
 
   // Function to display the searched word details
   function DisplayMeaning(response) {
-    let meaningElement = document.querySelector("#word-meaning");
-    meaningElement.innerHTML = response.data.word;
+    setResults(response.data);
+    let inputElement = document.querySelector("#search");
+    inputElement.value = "";
   }
 
   // Function to update teh state of the input keyword
@@ -39,7 +42,9 @@ export default function Dictionary() {
             placeholder="Enter a word"
           />
         </form>
-        <div className="" id="word-meaning"></div>
+        <div className="" id="word-meaning">
+          <WordMeaning results={results} />
+        </div>
       </div>
     </div>
   );
