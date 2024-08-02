@@ -1,1 +1,22 @@
-
+.App-header {
+  padding-top: 25px;
+}
+.App-header h1 {
+  color: #ef233c;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 25px;
+  background: #f4a261;
+  border-radius: 10px;
+}
+.App-footer {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
