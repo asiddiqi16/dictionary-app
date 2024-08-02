@@ -1,14 +1,28 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Dictionary.css";
 
 export default function Dictionary() {
+  //dictionary word lookup state
   let [keyword, setKeyword] = useState(null);
+  // dictionary api key
+  const apiKey = "483ecb596o30da81tf76d2a4bf19d4a6";
+
+  // Function to display the searched word details
+  function DisplayMeaning(response) {
+    let meaningElement = document.querySelector("#word-meaning");
+    meaningElement.innerHTML = response.data.word;
+  }
+
+  // Function to update teh state of the input keyword
   function updateKeyword(event) {
     setKeyword(event.target.value);
   }
+  // Function to perform the API call
   function lookUp(event) {
     event.preventDefault();
-    console.log(keyword);
+    let apiURL = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    axios.get(apiURL).then(DisplayMeaning);
   }
   return (
     <div className="container-fluid">
@@ -22,9 +36,10 @@ export default function Dictionary() {
             required
             autoFocus={true}
             onChange={updateKeyword}
+            placeholder="Enter a word"
           />
-          <input type="submit" value="Look Up Word" />
         </form>
+        <div className="" id="word-meaning"></div>
       </div>
     </div>
   );
