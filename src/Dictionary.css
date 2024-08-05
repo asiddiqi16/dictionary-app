@@ -4,4 +4,13 @@
 
 #search {
   margin: 0;
+  width: 50%;
+  border-radius: 0.2rem;
+  padding: 10px 20px;
+  border: 1px #1b263b solid;
+}
+
+.Hint {
+  font-size: 0.8em;
+  margin-bottom: 30px;
 }

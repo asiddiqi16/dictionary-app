@@ -1,22 +1,60 @@
+body {
+  background-image: linear-gradient(
+      rgba(176, 196, 177, 0.4),
+      rgba(176, 196, 177, 0.4)
+    ),
+    url("../images/books.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.App {
+  margin-top: 50px;
+  color: #1b263b;
+}
 .App-header {
   padding-top: 25px;
+  margin-bottom: 25px;
 }
 .App-header h1 {
-  color: #ef233c;
   text-transform: uppercase;
-  font-family: "Nunito", sans-serif;
+  font-family: "merri-weather", sans-serif;
   font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 0px 9px rgba(27, 38, 59, 0.4);
 }
 .container {
-  max-width: 1200px;
-  width: 100%;
-  margin-top: 50px;
-  margin-left: 25px;
-  background: #f4a261;
   border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  background-color: #edafb8;
+  box-shadow: 1px 0px 20px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Nunito", sans-serif;
+  line-height: 1.5;
 }
 .App-footer {
   text-align: center;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  font-family: monospace;
+  color: white;
+}
+.App-footer a {
+  text-decoration: none;
+  color: white;
+  transition: color 150ms ease-in-out;
+}
+
+.App-footer a:hover {
+  color: #edafb8;
+}
+
+@media (max-width: 768px) {
+  .App {
+    margin-top: 5px;
+  }
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

@@ -1,7 +1,29 @@
 .word-meaning {
   margin: 0;
 }
+.phonetic {
+  margin-bottom: 40px;
+}
 
-.example {
-  font-style: italic;
+.Definition::first-letter {
+  text-transform: capitalize;
+}
+
+.definitions > div:nth-child(n) {
+  border-bottom: 2px rgba(27, 38, 59, 0.3) solid;
+  margin-bottom: 20px;
+}
+
+.definitions > div:last-child {
+  border: none;
+}
+
+.part-of-speech {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .phonetic {
+    margin-bottom: 10px;
+  }
 }
