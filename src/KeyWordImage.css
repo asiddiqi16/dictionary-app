@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+  border-radius: 4px;
+  object-position: center;
+}
+
+.KeyWordImage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.KeyWordImage > img:first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+@media (max-width: 768px) {
+  .KeyWordImage {
+    grid-template-columns: 1fr 1fr;
+  }
+}

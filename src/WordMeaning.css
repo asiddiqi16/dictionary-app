@@ -1,6 +1,9 @@
 .word-meaning {
   margin: 0;
 }
+.definitions {
+  width: 100%;
+}
 .phonetic {
   margin-bottom: 40px;
 }
